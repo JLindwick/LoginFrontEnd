@@ -7,7 +7,7 @@ import { Text, FAB, List } from 'react-native-paper'
 import Header from '../components/Header'
 
 // modify ViewNotes component
-function ViewNotes({ navigation }) {
+function MainPage({ navigation }) {
     const [notes, setNotes] = useState([])
     const addNote = note => {
             note.id = notes.length + 1
@@ -16,39 +16,18 @@ function ViewNotes({ navigation }) {
   
 return (
     <>
-      <Header titleText='Simple Note Taker' />
-      <View style={styles.container}>
-        {notes.length === 0 ? (
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>You do not have any notes</Text>
-          </View>
-        ) : (
-          <FlatList
-            data={notes}
-            renderItem={({ item }) => (
-              <List.Item
-                title={item.noteTitle}
-                description={item.noteValue}
-                descriptionNumberOfLines={1}
-                titleStyle={styles.listTitle}
-              />
-            )}
-            keyExtractor={item => item.id.toString()}
-          />
-        )}
+      <Header titleText='User Profile Page' />
+
         <FAB
           style={styles.fab}
           small
           icon='plus'
-          label='Add new note'
+          label='Log out'
           // add a second parameter object
           onPress={() =>
-            navigation.navigate('AddNotes', {
-              addNote
-            })
+            navigation.navigate('Welcome')
           }
         />
-      </View>
     </>
   )
         }  
@@ -78,4 +57,4 @@ return (
     }
   })
 
-export default ViewNotes
+export default MainPage

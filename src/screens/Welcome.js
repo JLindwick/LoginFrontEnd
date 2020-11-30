@@ -9,7 +9,7 @@ export default function Welcome({ navigation }) {
     <Header titleText='Welcome' />
         <View style={styles.container}>
             <View style={styles.titleContainer}>
-              <Text style={styles.title}>Welcome to Friend Finder!! Click login or signup to get started!</Text>
+              <Text style={styles.title}>Welcome to Whatever we want!! Click login or signup to get started!</Text>
             </View>
             <View style={styles.containerRow}>
             <FAB

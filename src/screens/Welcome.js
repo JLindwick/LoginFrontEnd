@@ -72,6 +72,6 @@ export default function Welcome({ navigation }) {
       margin: 20,
       right: 0,
       height:50,
-      bottom: -480
+      bottom: -440
     }
   })
